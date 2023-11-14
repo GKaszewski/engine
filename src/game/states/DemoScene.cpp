@@ -1,5 +1,4 @@
 #include "DemoScene.h"
-#include "imgui.h"
 
 namespace game {
     DemoScene::DemoScene(engine::Application& app) : StateBase(app) {
@@ -24,19 +23,18 @@ namespace game {
     }
 
     void DemoScene::render(sf::RenderTarget &renderer) {
-        renderer.clear(sf::Color::Cyan);
+        renderer.clear(sf::Color::Black);
         renderSystem.render(registry, renderer);
     }
 
     void DemoScene::renderGUI(sf::RenderTarget &renderer) {
         StateBase::renderGUI(renderer);
-        ImGui::Begin("Demo Scene");
-        ImGui::Button("Play");
-        ImGui::End();
     }
 
     void DemoScene::handleInput() {
-
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+            this->application->popState();
+        }
     }
 
     void DemoScene::handleEvent(sf::Event event) {

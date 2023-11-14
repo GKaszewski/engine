@@ -7,9 +7,13 @@ Very bare-bones engine in C++. Made for fun.
 - [x] gui (imgui)
 - [x] scene management
 - [x] asset management
-- [] serialization (cereal?)
-- [] scripting (python)
-- [] tilemap (tiled/ldtk)
+- [ ] serialization (cereal?)
+- [ ] scripting (python)
+- [ ] tilemap (tiled/ldtk)
+- [ ] Post-processing
+- [ ] better physics wrapper
+- [ ] tweening
+- [ ] particles
 
 # Build
 Use cmake, it should fetch all dependencies automatically.

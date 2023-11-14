@@ -71,6 +71,24 @@ add_executable(engine src/main.cpp
         src/game/entities/Player.h
         src/game/entities/Box.h
         src/game/systems/LogSystem.cpp
-        src/game/systems/LogSystem.h)
+        src/game/systems/LogSystem.h
+        src/game/states/GameScene.cpp
+        src/game/states/GameScene.h
+        src/game/components/AnimationComponent.h
+        src/game/systems/AnimationSystem.cpp
+        src/game/systems/AnimationSystem.h
+        src/game/entities/Bird.h
+        src/game/components/PlayerInputComponent.h
+        src/game/systems/PlayerInputSystem.cpp
+        src/game/systems/PlayerInputSystem.h
+        src/game/systems/BirdMovementSystem.cpp
+        src/game/systems/BirdMovementSystem.h
+        src/game/components/BirdMovementComponent.h
+        src/game/components/CollisionComponent.h
+        src/game/systems/CollisionSystem.cpp
+        src/game/systems/CollisionSystem.h
+        src/game/physics/ContactListener.cpp
+        src/game/physics/ContactListener.h
+)
 target_include_directories(${PROJECT_NAME} PRIVATE ${entt_SOURCE_DIR}/src)
 target_link_libraries(${PROJECT_NAME} ImGui-SFML::ImGui-SFML box2d sfml-audio)

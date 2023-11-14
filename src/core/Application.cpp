@@ -4,7 +4,7 @@
 #include "Physics.h"
 
 namespace engine {
-    Application::Application() : window({1280, 720}, "Engine") {
+    Application::Application() : window({640, 720}, "Engine") {
         window.setFramerateLimit(60);
         window.setPosition({window.getPosition().x, 0});
         // push state
